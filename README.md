@@ -1,5 +1,7 @@
 # MESHBULLET
 
+WIP - seeing how the case design will work with B-7000 glue
+
 <img width="500" height="500" alt="3490_RPi_Pico2_board_D_webp-107716-500x500" src="https://github.com/user-attachments/assets/06482550-a9e0-4326-8c30-ac8459f36bcd" />
 
 <img width="345" height="247" alt="W5500-MINI - Layout01" src="https://github.com/user-attachments/assets/0314ddc5-dca4-48a9-86b2-3b7e2d5f49ac" />
