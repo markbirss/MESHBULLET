@@ -60,6 +60,8 @@ https://www.robotics.org.za/Y2A240A
 
 Existing related work
 
+by Carlos Valdes
+
 https://github.com/meshtastic/firmware/pull/10552
 
 https://github.com/meshtastic/firmware/pull/10135
