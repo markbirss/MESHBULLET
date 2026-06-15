@@ -33,3 +33,11 @@ Testing DIY 3d Print Case
 
 <img width="1071" height="970" alt="image" src="https://github.com/user-attachments/assets/7a0d901a-5b20-48ad-a1c4-46352514423e" />
 
+Links
+
+https://wiznet.io/products/ethernet-modules/wiz850io
+https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html
+https://www.seeedstudio.com/Wio-LR1121-with-IPEX-antenna-connector-p-6479.html
+https://www.waveshare.com/core1121-xf.htm
+https://www.waveshare.com/core2021-xf.htm
+https://wiznet.io/products/powered-by-raspberry-pi/w5500-evb-pico2
