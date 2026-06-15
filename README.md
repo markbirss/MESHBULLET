@@ -55,6 +55,10 @@ https://wiznet.io/products/PoE/wizpoe-p1
 
 https://www.robotics.org.za/Y2A240A
 
+https://make.net.za/product/3me0022/
+
+https://make.net.za/product/3me0015/
+
 Credits
 
 Carlos Valdes for work with regard to Meshtastic Wiznet Ethernet and board support
