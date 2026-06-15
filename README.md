@@ -1,5 +1,9 @@
 # MESHBULLET
 
+DIY Meshtastic Ethernet Raspberry Pi Pico RP2350 with 3D print enclosure.
+
+EtH-OTA-RP2350-W5500-W6100-WIO-SX1262-WIO-LR1121-WS-LR1121-WS-LR2021
+
 WIP - seeing how the case design will work with B-7000 glue
 
 non PoE Version (wiz850io)  with wio-sx1262
