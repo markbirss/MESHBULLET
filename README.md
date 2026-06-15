@@ -55,6 +55,9 @@ https://wiznet.io/products/PoE/wizpoe-p1
 
 https://www.robotics.org.za/Y2A240A
 
+Credits
+
+Carlos Valdes for work with regard to Wiznet Ethernet and board support
 
 Based on existing related work by Carlos Valdes
 
