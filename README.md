@@ -57,7 +57,7 @@ https://www.robotics.org.za/Y2A240A
 
 Credits
 
-Carlos Valdes for work with regard to Wiznet Ethernet and board support
+Carlos Valdes for work with regard to Meshtastic Wiznet Ethernet and board support
 
 Based on existing related work by Carlos Valdes
 
