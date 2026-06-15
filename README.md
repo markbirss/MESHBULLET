@@ -2,14 +2,14 @@
 
 WIP - seeing how the case design will work with B-7000 glue
 
-non PoE Versoin with wio-sx1262
+non PoE Version (wiz850io)  with wio-sx1262
 
 <img width="1848" height="4000" alt="20260615_182515" src="https://github.com/user-attachments/assets/a23e4a62-59ba-4bb9-b5eb-09c8e8e9c086" />
 
 <img width="1848" height="4000" alt="20260615_182526" src="https://github.com/user-attachments/assets/f7f75654-1eed-4edd-8765-8d5831359eb6" />
 
 
-PoE version Wiznet 
+PoE version Wiznet ( W61100 + Waveshare LR2021 )
 
 <img width="1848" height="4000" alt="20260615_182603" src="https://github.com/user-attachments/assets/65516aeb-60a5-4157-99f4-2df2e8e74674" />
 
