@@ -10,4 +10,7 @@
 
 <img width="317" height="107" alt="Photo-View_2026-05-14 (1)" src="https://github.com/user-attachments/assets/b7764e6e-593f-4f0e-9f17-bc4e8d7f7716" />
 
+Testing DIY 3d Print Case
+
+<img width="1071" height="970" alt="image" src="https://github.com/user-attachments/assets/7a0d901a-5b20-48ad-a1c4-46352514423e" />
 
