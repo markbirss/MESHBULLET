@@ -41,3 +41,4 @@ https://www.seeedstudio.com/Wio-LR1121-with-IPEX-antenna-connector-p-6479.html
 https://www.waveshare.com/core1121-xf.htm
 https://www.waveshare.com/core2021-xf.htm
 https://wiznet.io/products/powered-by-raspberry-pi/w5500-evb-pico2
+https://wiznet.io/products/evaluation-boards/w6100-evb-pico2
