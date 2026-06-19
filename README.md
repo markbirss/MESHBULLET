@@ -2,7 +2,8 @@
 
 PoE and non-PoE Meshtastic version
 * Raspberry Pi Pico RP2350 powered
-* Wiznet Ethernet
+* SPI Wiznet Ethernet
+* SPI LoRa radio module SX1262 / LR1121 / LR2011
 * 3D print enclosure
 
 Instructions:
