@@ -1,8 +1,37 @@
 # MESHBULLET
 
-DIY Meshtastic Ethernet PoE and non PoE Raspberry Pi Pico RP2350 with 3D print enclosure.
+DIY Meshtastic PoE and non PoE version
+* Raspberry Pi Pico RP2350 based
+* 3D print enclosure.
+
+Instructions:
+
+Gather Parts for 
+non-PoE version -
+
+* RP2350 board
+* Wis85Dio
+* LoRa Radio Module
+* PCB
+* 2.54 Headers
+* B-7000 Glue
+
+PoE version - 
+
+* RP2350 board
+* W6100-EVB-Pico2 / W5100S-EVB-Pico2
+* LoRa Radio Module
+* PCB
+* 2.54 Headers
+* B-7000 Glue
+
+Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
+3D print parts
+
 
 Used B-7000 glue ( needs about 2 days to cure well )
+
+Pictures
 
 non PoE Version (wiz850io)  with wio-sx1262
 
