@@ -1,6 +1,6 @@
 # 🛰️ MESHBULLET
 
-PoE and non-PoE Meshtastic node supporting OTA over Ethernet update ability with 3D print enclosure.
+PoE and non-PoE Meshtastic node supporting OTA over Ethernet ability with 3D print enclosure.
 
 ---
 
