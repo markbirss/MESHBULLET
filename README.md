@@ -16,7 +16,7 @@ non-PoE version -
 * 2.54 Headers
 * B-7000 Glue
 * Solder LoRa Module onto PCB
-* Solder Wis85Dio onto PCB
+* Solder Wis85Dio into PCB
 * Solder header to pico while inserted into PCB, then solder header to PCB ( refer to pictures below for header orientation )
 
 PoE version - 
