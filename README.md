@@ -1,6 +1,6 @@
 # 🛰️ MESHBULLET
 
-PoE and non-PoE Meshtastic node with 3D print enclosure.
+PoE and non-PoE Meshtastic node supporting OTA over Ethernet update ability with 3D print enclosure.
 
 ---
 
@@ -103,7 +103,7 @@ Special thanks to **Carlos Valdes** for foundational implementation and contribu
 This development ecosystem directly references and relies upon upstream firmware improvements:
 * [Meshtastic Firmware PR #10552](https://github.com/meshtastic/firmware/pull/10552)
 * [Meshtastic Firmware PR #10135](https://github.com/meshtastic/firmware/pull/10135)
-
+* [Meshtastic Firmware PR #10136](https://github.com/meshtastic/firmware/pull/10136)
 ---
 
 ## ⚠️ Disclaimer
