@@ -34,8 +34,11 @@ PoE version -
 <img width="4000" height="1848" alt="20260619_112228" src="https://github.com/user-attachments/assets/08f2fe31-11b9-4ec4-84bb-42252d97b3c5" />
 
 
+
 Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
+
 3D print parts
+
 Glue into place the RJ45 end of into the RJ45 Lan Cap
 
 
