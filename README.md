@@ -114,6 +114,8 @@ This development ecosystem directly references and relies upon upstream firmware
 ## ☕ Support My Work
 If this open hardware project brings utility to your configurations, consider supporting my design pipeline!
 
+[![Buy Me A Coffee](https://shields.io)](https://buymeacoffee.com/mark.birss)
+
 <a href="https://buymeacoffee.com" target="_blank">
   <img src="https://shields.io" alt="Buy Me A Coffee">
 </a>
