@@ -107,7 +107,7 @@ This development ecosystem directly references and relies upon upstream firmware
 ---
 
 ## ⚠️ Disclaimer
-> **Warning:** Use of these GERBER design matrices and 3D printing structural configurations is entirely at your own risk. The project developers accept no liability for hardware damage, malfunctions, or safety hazards resulting from replication.
+> **Warning:** Use of these GERBER design and 3D print enclosure is entirely at your own risk. The project developer accept no liability for hardware damage, malfunctions, or safety hazards resulting from replication.
 
 ---
 
