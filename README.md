@@ -112,6 +112,6 @@ This development ecosystem directly references and relies upon upstream firmware
 ---
 
 ## ☕ Support My Work
-If this open hardware project brings utility to your configurations, consider supporting my design pipeline!
+If this open hardware project brings utility to you, consider supporting my design pipeline!
 
 [![Buy Me A Coffee](https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/mark.birss)
