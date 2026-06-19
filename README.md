@@ -98,7 +98,7 @@ PoE and non-PoE Meshtastic node supporting OTA over Ethernet update ability with
 ---
 
 ## 🤝 Credits & Acknowledgements
-Special thanks to **Carlos Valdes** for foundational implementation and contributions regarding Meshtastic Wiznet Ethernet stack integration and custom board configuration support.
+Special thanks to **Carlos Valdes** for foundational implementation and contributions regarding Meshtastic Wiznet Ethernet stack integration, OTA over Ethernet and custom board configuration support.
 
 This development ecosystem directly references and relies upon upstream firmware improvements:
 * [Meshtastic Firmware PR #10552](https://github.com/meshtastic/firmware/pull/10552)
