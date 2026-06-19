@@ -2,7 +2,7 @@
 
 DIY Meshtastic Ethernet PoE and non PoE Raspberry Pi Pico RP2350 with 3D print enclosure.
 
-WIP - seeing how the case design will work with B-7000 glue
+Used B-7000 glue ( needs about 2 days to cure well )
 
 non PoE Version (wiz850io)  with wio-sx1262
 
