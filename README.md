@@ -35,14 +35,18 @@ PoE version -
 
 
 
-Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
+* Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
 
-3D print parts
+* 3D print parts
 
-Glue into place the RJ45 end of into the RJ45 Lan Cap
+* Glue into place the RJ45 end of into the RJ45 Lan Cap
 
+* Flash board with firmware ( still to release or merge this DIY varaint )
 
-Used B-7000 glue ( needs about 2 days to cure well )
+* Aseemble SMA connectors and glue together parts
+
+Use B-7000 glue ( needs about 2 days to cure well )
+
 
 Pictures
 
