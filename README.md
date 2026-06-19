@@ -22,7 +22,7 @@ non-PoE version -
 PoE version - 
 
 * Wiznet W6100-EVB-Pico2 / W5100S-EVB-Pico2
-* LoRa Radio Module ( available choices are Seeed WIO-SX1262 / WIO-LR1121 or Waveshare WS-LR1121 / WS-LR2021 ( uses same pcb footprint ) )
+* LoRa Radio Module ( available choices are Seeed WIO-SX1262 / WIO-LR1121 or Waveshare WS-LR1121 / WS-LR2021 - uses same pcb footprint )
 * PCB
 * 2.54 Headers
 * B-7000 Glue
@@ -43,7 +43,7 @@ PoE version -
 
 * Flash board with firmware ( still to release or merge this DIY varaint )
 
-* Aseemble SMA connectors and glue together parts
+* Aseemble SMA connectors, uFl pigtails and glue together parts
 
 Use B-7000 glue ( needs about 2 days to cure well )
 
