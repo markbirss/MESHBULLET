@@ -1,6 +1,6 @@
 # 🛰️ MESHBULLET
 
-An advanced PoE and non-PoE Meshtastic node architecture featuring dual-variant hardware pathways.
+An PoE and non-PoE Meshtastic node featuring dual-variant hardware pathways.
 
 ---
 
