@@ -15,6 +15,9 @@ non-PoE version -
 * PCB
 * 2.54 Headers
 * B-7000 Glue
+* Solder LoRa Module onto PCB
+* Solder Wis85Dio onto PCB
+* Solder header to pico while inserted into PCB, then solder header to PCB ( refer to pictures below for orientation )
 
 PoE version - 
 
@@ -24,6 +27,8 @@ PoE version -
 * PCB
 * 2.54 Headers
 * B-7000 Glue
+* Solder LoRa Module onto PCB
+* Solder header to Wiznet EVB while inserted into PCB, then solder header to PCB ( refer to pictures below for orientation )
 
 Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
 3D print parts
