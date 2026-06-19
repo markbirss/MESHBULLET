@@ -10,8 +10,8 @@ Gather Parts for
 non-PoE version -
 
 * RP2350 board
-* Wis85Dio
-* LoRa Radio Module
+* Wis85Dio ( W5500 )
+* LoRa Radio Module ( available choices are Seeed WIO-SX1262 / WIO-LR1121 only as the WS-LR1121/WS-LR2021 footpint will be used by the W5500 Wis85Dio ) 
 * PCB
 * 2.54 Headers
 * B-7000 Glue
@@ -21,9 +21,8 @@ non-PoE version -
 
 PoE version - 
 
-* RP2350 board
-* W6100-EVB-Pico2 / W5100S-EVB-Pico2
-* LoRa Radio Module
+* Wiznet W6100-EVB-Pico2 / W5100S-EVB-Pico2
+* LoRa Radio Module ( available choices are Seeed WIO-SX1262 / WIO-LR1121 or Waveshare WS-LR1121 / WS-LR2021 ( uses same pcb footprint ) )
 * PCB
 * 2.54 Headers
 * B-7000 Glue
