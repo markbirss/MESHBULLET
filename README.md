@@ -1,8 +1,8 @@
 # MESHBULLET
 
-DIY Meshtastic PoE and non PoE version
-* Raspberry Pi Pico RP2350 based
-* 3D print enclosure.
+PoE and non-PoE Meshtastic version
+* Raspberry Pi Pico RP2350 powered
+* 3D print enclosure
 
 Instructions:
 
