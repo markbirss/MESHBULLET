@@ -8,7 +8,7 @@ PoE and non-PoE Meshtastic node with 3D print enclosure.
 * **Core:** Powered by the Raspberry Pi Pico RP2350 microcontroller.
 * **Connectivity:** High-performance SPI Wiznet Ethernet.
 * **RF Engine:** Flexible SPI LoRa radio module support (SX1262 / LR1121 / LR2011).
-* **Enclosure:** Compact, custom 3D-printable enclosure system.
+* **Enclosure:** Compact, custom 3D-printable enclosure.
 
 ---
 
@@ -115,3 +115,5 @@ This development ecosystem directly references and relies upon upstream firmware
 If this open hardware project brings utility to your configurations, consider supporting my design pipeline!
 
 [![Buy Me A Coffee](https://shields.io)](https://buymeacoffee.com/mark.birss)
+
+[![Buy Me A Coffee](https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com)
