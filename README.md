@@ -68,3 +68,15 @@ Based on existing related work by Carlos Valdes
 https://github.com/meshtastic/firmware/pull/10552
 
 https://github.com/meshtastic/firmware/pull/10135
+
+
+# **JLBPCB Gerber view (online)**
+https://jlcpcb.com/RGE
+
+# **DISCLAIMER**
+
+# Use of these GERBER, BOM and CPL are at your own risk
+
+Support my work and consider **buying  me a coffee**
+
+https://buymeacoffee.com/mark.birss
