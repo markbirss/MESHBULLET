@@ -2,6 +2,7 @@
 
 PoE and non-PoE Meshtastic version
 * Raspberry Pi Pico RP2350 powered
+* Wiznet Ethernet
 * 3D print enclosure
 
 Instructions:
