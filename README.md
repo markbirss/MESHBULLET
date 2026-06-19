@@ -6,6 +6,14 @@ PoE and non-PoE Meshtastic version
 
 Instructions:
 
+Requires
+
+* Sending PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
+* 3D print parts
+* Glue into place the RJ45 end into the RJ45 Lan Cap - B-7000 glue ( needs about 2 days to cure well ) - ensure it at 90 degree angle as pictured.
+* Flash board with firmware ( still to release or merge this DIY varaint )
+* Aseemble SMA connectors, uFl pigtails and glue together parts
+
 Gather Parts for 
 non-PoE version -
 
@@ -30,23 +38,7 @@ PoE version -
 * Solder Wiznet PoE module into the Wisnet EVB allow a tiny gap between the Wiznet EVB and Wisnet PoE board
 * Solder header to Wiznet EVB while inserted into PCB, then solder header to PCB ( refer to pictures below for header orientation )
 
-
 <img width="4000" height="1848" alt="20260619_112228" src="https://github.com/user-attachments/assets/08f2fe31-11b9-4ec4-84bb-42252d97b3c5" />
-
-
-
-* Send PCB Gerber for PCB manufacture ( JLCPCB allow 5 pcs mimimum )
-
-* 3D print parts
-
-* Glue into place the RJ45 end of into the RJ45 Lan Cap
-
-* Flash board with firmware ( still to release or merge this DIY varaint )
-
-* Aseemble SMA connectors, uFl pigtails and glue together parts
-
-Use B-7000 glue ( needs about 2 days to cure well )
-
 
 Pictures
 
