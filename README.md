@@ -21,7 +21,7 @@ PoE and non-PoE Meshtastic node supporting OTA over Ethernet including a 3D prin
 
 ### Assembly Steps
 * **RJ45 Cap:** Glue the RJ45 end securely into the RJ45 LAN Cap using B-7000 glue. Ensure it is aligned at a precise 90-degree angle. Allow **2 days** to fully cure.
-* **RF Assembly:** Assemble the SMA connectors and uFl pigtails, then glue the matching structural parts together.
+* **RF Assembly:** Assemble the SMA connectors, LoRa antenna and uFl pigtails, then glue the matching structural parts together.
 
 ---
 
