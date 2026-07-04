@@ -48,6 +48,14 @@ PoE and non-PoE Meshtastic node supporting OTA over Ethernet including a 3D prin
 
 ---
 
+
+## 📌 Variants
+
+https://github.com/markbirss/MESHBULLET/blob/main/variant/README.md
+
+---
+
+
 ## 📸 Media Gallery
 
 ### Hardware Overview
