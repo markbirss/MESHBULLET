@@ -1,115 +1,81 @@
 # 🛰️ MESHBULLET
 
-[![Meshtastic](https://shields.io)](https://github.com)
-[![Platform](https://shields.io)](https://raspberrypi.com)
-[![PoE Support](https://shields.io)](#)
-
-An advanced, high-efficiency Meshtastic node featuring Power-over-Ethernet (PoE) or standalone layout configurations. Supports complete Over-The-Air (OTA) updates directly via SPI-based Ethernet interfaces and includes a specialized, modular cylindrical 3D-printable enclosure system.
+PoE and non-PoE Meshtastic node supporting OTA over Ethernet including a 3D print enclosure.
 
 ---
 
 ## 📌 Features
-
-*   **Core Processing:** Powered by the cutting-edge Raspberry Pi Pico RP2350 microcontroller architecture.
-*   **Wired Data Routing:** High-performance hardware SPI interface utilizing Wiznet Ethernet controller modules for stable infrastructure backhaul.
-*   **RF Engine Layer:** Universal layout architecture supporting multi-footprint SPI LoRa radio components (SX1262 / LR1121 / LR2011 configurations).
-*   **Enclosure Engineering:** Completely optimized, multi-part interlocking cylindrical 3D-printable stack housing.
-
----
-
-## 📂 Repository Structure & Target Configuration
-
-To compile the firmware for this hardware stack, your local build environment must contain the custom variant files mapped inside the correct target path configuration directories.
-
-### Directory Layout
-```text
-firmware/
-├── variants/
-│   └── meshbullet/
-│       ├── variant.h          # Hardware SPI pin remappings and macro overrides
-│       ├── variant.cpp        # Low-level initialization routines for WIZnet/LoRa
-│       └── platformio.ini     # Compilation definitions and target dependencies
-```
-
-### Compiler Target Definitions
-When building the firmware via PlatformIO, ensure your environments block references the custom hardware configurations outlined below:
-
-| Macro Definition | Configured Assignment | Target Hardware Purpose |
-| :--- | :--- | :--- |
-| `ARCH_RP2350` | `1` | Targets the Raspberry Pi Pico 2 architecture |
-| `ETHERNET_SPI_CS` | `GPIO_PIN_X` | Hardware mapping for the WIZnet Chip Select line |
-| `LORA_SPI_CS` | `GPIO_PIN_Y` | Independent SPI Chip Select for the transceiver module |
-| `USE_WIZNET_ETHERNET` | `1` | Forces compilation of the wired OTA stack |
+* **Core:** Powered by the Raspberry Pi Pico RP2350 microcontroller.
+* **Connectivity:** High-performance SPI Wiznet Ethernet.
+* **RF Engine:** Flexible SPI LoRa radio module support (SX1262 / LR1121 / LR2011).
+* **Enclosure:** Compact, custom 3D-printable enclosure.
 
 ---
 
 ## 🛠️ General Instructions
 
 ### Prerequisites
-1.  **PCB Fabrication:** Upload the provided PCB Gerber files directly to an aggregation production house (e.g., [JLCPCB](https://jlcpcb.com) — 5 pieces minimum batch).
-2.  **3D Printing Execution:** Slice and print all structural assembly assets using stable thermal filaments (PETG/ASA recommended for outdoor nodes).
-3.  **Firmware Provisioning:** Copy the contents of the `variants/meshbullet/` folder into your compilation directory and specify the target profile when executing the build environment script.
+1. **PCB Fabrication:** Submit the provided PCB Gerber files to a manufacturer (e.g., [JLCPCB](https://jlcpcb.com/RGE) — 5 pieces minimum).
+2. **3D Printing:** Print all required enclosure components.
+3. **Firmware:** Flash the board with the firmware (Note: This specific DIY variant firmware is pending release/merge).
 
-### Assembly & Structural Splicing Steps
-*   **RJ45 Interface Cap:** Securely seat the RJ45 mag-jack terminal housing into the dedicated printed 3D LAN cap recess using industrial B-7000 adhesive. Ensure a square, perfect 90-degree installation alignment. Let it sit for **2 full days** to allow complete polymer curing.
-*   **RF / Antennal Rigging:** Route your ultra-flexible u.Fl to SMA pigtail extensions through the mounting paths, mount the bulkhead structural ring tightly, and set the exterior SMA threads before locking down the modular stack plates.
+### Assembly Steps
+* **RJ45 Cap:** Glue the RJ45 end securely into the RJ45 LAN Cap using B-7000 glue. Ensure it is aligned at a precise 90-degree angle. Allow **2 days** to fully cure.
+* **RF Assembly:** Assemble the SMA connectors, LoRa antenna and uFl pigtails, then glue the matching structural parts together.
 
 ---
 
 ## 🔌 Hardware Variants & Bill of Materials (BOM)
 
-### 1. Non-PoE Infrastructure Setup
-*   **Main Processing Core:** Raspberry Pi Pico 2 (RP2350)
-*   **Wired Ethernet ASIC:** Wiznet WIZ850io (W5500 Engine)
-*   **LoRa Module Allocations:** Seeed Studio Wio-SX1262 or Wio-LR1121 form factors only.
-    > [!IMPORTANT]
-    > Due to strict physical trace overlap constraints with the wide W5500 WIZ850io footprint layout, Waveshare WS-LR1121 and WS-LR2021 component outlines cannot be co-populated on the Non-PoE PCB variant.
-*   **Chassis & Connections:** MESHBULLET Non-PoE specialized PCB, matching 2.54mm square male/female header strips, and B-7000 adhesive.
-*   **Recommended Soldering Sequence:**
-    1. Flat-mount and solder the primary surface LoRa module to its landing array.
-    2. Solder the secondary WIZ850io structural frame down directly onto its pin fields.
-    3. Install the alignment pin headers into the parent board, drop the Raspberry Pi Pico 2 on top to guarantee precise axial alignment, solder the header rows to the Pico pads first, then complete connection points on the bottom side of the PCB.
+### 1. Non-PoE Version
+* **Core Board:** Raspberry Pi Pico RP2350
+* **Ethernet:** Wiz850io (W5500)
+* **LoRa Options:** Seeed WIO-SX1262 or WIO-LR1121 only *(Note: WS-LR1121/WS-LR2021 footprints are unavailable as they overlap with the W5500 Wiz850io footprint).*
+* **Hardware & Consumables:** MESHBULLET Non-PoE PCB, 2.54mm pitch headers, B-7000 Glue.
+* **Solder Sequence:**
+  1. Solder the LoRa Module onto the PCB.
+  2. Solder the Wiz850io module onto the PCB.
+  3. Insert the pin headers into the PCB, seat the Pico onto the headers to ensure perfect alignment, solder the headers to the Pico, and finally solder them to the PCB.
 
-### 2. PoE (Power-over-Ethernet) Integrated Setup
-*   **Combined Processing/Ethernet Core:** Wiznet W6100-EVB-Pico2 or W5100S-EVB-Pico2 evaluation platform.
-*   **LoRa Module Allocations:** Shared universal hardware footprint accepting Seeed Studio Wio-SX1262 / Wio-LR1121 or Waveshare WS-LR1121 / WS-LR2021 components.
-*   **Chassis & Connections:** MESHBULLET PoE specialized breakout base PCB, 2.54mm header blocks, and B-7000 structural glue.
-*   **Recommended Soldering Sequence:**
-    1. Surface-solder your selected surface-mount LoRa transceiver module down to the landing layout pads.
-    2. Mount and solder the dedicated Wiznet PoE power module addon directly onto the host Wiznet EVB-Pico2 board assembly. Leave a sub-millimeter visual air gap to prevent thermal bridging between planes.
-    3. Drop standard headers into the base footprint, lower your modular EVB board assembly over the pin rows to anchor layout alignment, solder out the top interface pads, and then secure the base joints underneath.
+### 2. PoE (Power over Ethernet) Version
+* **Core Board:** Wiznet W6100-EVB-Pico2 or W5100S-EVB-Pico2
+* **LoRa Options:** Seeed WIO-SX1262 / WIO-LR1121 or Waveshare WS-LR1121 / WS-LR2021 *(shared universal footprint).*
+* **Hardware & Consumables:** MESHBULLET PoE PCB, 2.54mm pitch headers, B-7000 Glue.
+* **Solder Sequence:**
+  1. Solder the LoRa Module onto the PCB.
+  2. Solder the Wiznet PoE module into the Wiznet EVB, leaving a tiny air gap between the Wiznet EVB and the Wiznet PoE board.
+  3. Insert headers into the PCB, seat the Wiznet EVB assembly to ensure alignment, solder to the EVB, and then solder to the PCB.
 
 ---
 
 ## 📸 Media Gallery
 
-### Structural Assemblies & Enclosure Internals
+### Hardware Overview
+<img width="100%" alt="MESHBULLET Hardware Architecture" src="https://github.com/user-attachments/assets/08f2fe31-11b9-4ec4-84bb-42252d97b3c5" />
 
-| Hardware Profile View | LoRa Transceiver Alignment |
-| :---: | :---: |
-| <img src="https://github.com" width="100%"/> | <img src="https://github.com" width="100%"/> |
+### Non-PoE Build (Wiz850io + WIO-SX1262)
+<p>
+  <img width="49%" alt="Non-PoE Front View" src="https://github.com/user-attachments/assets/a23e4a62-59ba-4bb9-b5eb-09c8e8e9c086" />
+  <img width="49%" alt="Non-PoE Back View" src="https://github.com/user-attachments/assets/f7f75654-1eed-4edd-8765-8d5831359eb6" />
+</p>
 
-### Sub-Assembly Profiles & Enclosure Testing
+### PoE Build (W6100 + Waveshare LR2021) & Enclosure Testing
+<p>
+  <img width="49%" alt="PoE Assembly View" src="https://github.com/user-attachments/assets/65516aeb-60a5-4157-99f4-2df2e8e74674" />
+  <img width="49%" alt="DIY 3D Print Case Fitting" src="https://github.com/user-attachments/assets/7a0d901a-5b20-48ad-a1c4-46352514423e" />
+</p>
 
-| W5500/Wio Base Trace | Cylindrical Enclosure Fitting |
-| :---: | :---: |
-| <img src="https://github.com" width="100%"/> | <img src="https://github.com" width="100%"/> |
+### Components & Render References
+<p>
+  <img width="32%" alt="RPi Pico 2" src="https://github.com/user-attachments/assets/06482550-a9e0-4326-8c30-ac8459f36bcd" />
+  <img width="32%" alt="W5500-MINI Layout" src="https://github.com/user-attachments/assets/0314ddc5-dca4-48a9-86b2-3b7e2d5f49ac" />
+  <img width="32%" alt="Wiznet W6100 Plus PoE" src="https://github.com/user-attachments/assets/3fb20cb5-b09f-4d09-92a0-f1a1e6372f61" />
+</p>
 
-### 3D CAD Explo Layouts & Reference Models
-
-| Modular Enclosure Array | RP2350 Microcontroller |
-| :---: | :---: |
-| <img src="https://github.com" width="100%"/> | <img src="https://github.com" width="100%"/> |
-
-| HanRun Mag-Jack Pinout | PoE Modulated Evaluation Deck |
-| :---: | :---: |
-| <img src="https://github.com" width="100%"/> | <img src="https://github.com" width="100%"/> |
-
-### PCB Routing Visualizations
-
-| Bare Board Render (Top View) | Bare Board Render (Bottom View) |
-| :---: | :---: |
-| <img src="https://github.com" width="100%"/> | <img src="https://github.com" width="100%"/> |
+<p>
+  <img width="49%" alt="PCB Render Top" src="https://github.com/user-attachments/assets/6eee33f8-fdad-4ac4-8d7e-d5595d56cc8e" />
+  <img width="49%" alt="PCB Render Bottom" src="https://github.com/user-attachments/assets/b7764e6e-593f-4f0e-9f17-bc4e8d7f7716" />
+</p>
 
 ---
 
@@ -117,39 +83,41 @@ When building the firmware via PlatformIO, ensure your environments block refere
 
 | Category | Component Item | Resource Link |
 | :--- | :--- | :--- |
-| **Modules** | Wiznet WIZ850io | [Product Page](https://wiznet.io) |
-| **LoRa Modules** | Seeed Studio Wio-SX1262 | [Product Page](https://seeedstudio.com) |
-| | Seeed Studio Wio-LR1121 | [Product Page](https://seeedstudio.com) |
-| | Waveshare Core1121-XF | [Product Page](https://waveshare.com) |
-| | Waveshare Core2021-XF | [Product Page](https://waveshare.com) |
-| **Dev Boards** | Wiznet W5500-EVB-Pico2 | [Product Page](https://wiznet.io) |
-| | Wiznet W6100-EVB-Pico2 | [Product Page](https://wiznet.io) |
-| **Power Supply**| Wiznet WizPoE-P1 | [Product Page](https://wiznet.io) |
-| **Local Sourcing**| Robotics Za Component | [Product Page](https://robotics.org.za) |
-| | Make Net Za Element A | [Product Page](https://make.net.za) |
-| | Make Net Za Element B | [Product Page](https://make.net.za) |
+| **Modules** | Wiznet WIZ850io | [Product Page](https://wiznet.io/products/ethernet-modules/wiz850io) |
+| **LoRa Modules** | Seeed Studio Wio-SX1262 | [Product Page](https://www.seeedstudio.com/Wio-SX1262-Wireless-Module-p-5981.html) |
+| | Seeed Studio Wio-LR1121 | [Product Page](https://www.seeedstudio.com/Wio-LR1121-with-IPEX-antenna-connector-p-6479.html) |
+| | Waveshare Core1121-XF | [Product Page](https://www.waveshare.com/core1121-xf.htm) |
+| | Waveshare Core2021-XF | [Product Page](https://www.waveshare.com/core2021-xf.htm) |
+| **Dev Boards** | Wiznet W5500-EVB-Pico2 | [Product Page](https://wiznet.io/products/powered-by-raspberry-pi/w5500-evb-pico2) |
+| | Wiznet W6100-EVB-Pico2 | [Product Page](https://wiznet.io/products/evaluation-boards/w6100-evb-pico2) |
+| **Power Supply**| Wiznet WizPoE-P1 | [Product Page](https://wiznet.io/products/PoE/wizpoe-p1) |
+| **Local Sourcing**| Robotics Za Component | [Product Page](https://www.robotics.org.za/Y2A240A) |
+| | Make Net Za Element A | [Product Page](https://make.net.za/product/3me0022/) |
+| | Make Net Za Element B | [Product Page](https://make.net.za/product/3me0015/) |
 
 ---
 
 ## 🤝 Credits & Acknowledgements
 
-Special thanks to:
-*   The **MESHTASTIC** core project developer community for baseline firmware layers: [https://github.com](https://github.com).
-*   **Carlos Valdes** for creating foundational architectural paths, code modifications for the integrated Wiznet hardware Ethernet layer, custom OTA codebases over wired interfaces, and localized board settings targets.
 
-This open physical hardware development tracking framework references, utilizes, and implements features tracking code updates via upstream project merges:
-*   [Meshtastic Firmware PR #10552](https://github.com/firmware/pull/10552)
-*   [Meshtastic Firmware PR #10135](https://github.com/firmware/pull/10135)
-*   [Meshtastic Firmware PR #10136](https://github.com/firmware/pull/10136)
+Special thanks to
 
+The MESHTASTIC Project and Developers including community members -  https://github.com/meshtastic
+
+**Carlos Valdes** for foundational implementation and contributions regarding Meshtastic Wiznet Ethernet stack integration, OTA over Ethernet and board configuration support.
+
+This development ecosystem directly references and relies upon upstream firmware improvements:
+* [Meshtastic Firmware PR #10552](https://github.com/meshtastic/firmware/pull/10552)
+* [Meshtastic Firmware PR #10135](https://github.com/meshtastic/firmware/pull/10135)
+* [Meshtastic Firmware PR #10136](https://github.com/meshtastic/firmware/pull/10136)
 ---
 
 ## ⚠️ Disclaimer
-
-> [!WARNING]
-> Use of these layout design materials, raw Gerber PCB manufacturing maps, firmware instructions, and custom 3D structural housing printing profiles is completely at your own risk. The developer environment contributors accept no legal liability or responsibility for physical component damage, systemic firmware failures, short-circuits, or fire hazards during replication.
+> **Warning:** Use of the PCB GERBER and 3D print enclosure is entirely at your own risk. The project developer accept no liability for hardware damage, malfunctions, or safety hazards resulting from replication.
 
 ---
 
 ## ☕ Support My Work
+If this open hardware project brings utility to you, consider supporting my design pipeline!
 
+[![Buy Me A Coffee](https://img.shields.io/badge/buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/mark.birss)
