@@ -10,7 +10,7 @@ Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 2 MB flash) with an ex
 | --------- | ------------------- | ---------------------------------------- |
 | MCU       | Raspberry Pi Pico 2 | RP2350 @ 150 MHz, 512 KB RAM, 4 MB flash |
 | Ethernet  | W5500 module        | Any WIZnet W5500 breakout board          |
-| LoRa      | WAVESHARE LR2021    | LR2021 (XTAL) + 22 dBm, 868/915 MHz          |
+| LoRa      | Waveshare LR2021 XTAL    | LR2021 ( no TXCO ) + 22 dBm, 868/915 MHz          |
 
 ---
 
