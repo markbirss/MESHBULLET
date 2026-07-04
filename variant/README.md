@@ -1,6 +1,7 @@
 # Arduino Ethernet Library Comparison: Standard vs. WIZnet W6100 Fork
 
-<img width="768" height="1376" alt="image" src="https://github.com/user-attachments/assets/3bd41d2e-e188-49e8-9769-e83026f3f6c1" />
+<img width="896" height="1200" alt="image" src="https://github.com/user-attachments/assets/d28949b5-2914-41a8-ba08-46ef1a8808db" />
+
 
 A comprehensive guide explaining the architectural, protocol, and hardware differences between the official **Standard Arduino Ethernet Library** and the specialized **WIZnet W6100 IPv6 Fork**.
 
