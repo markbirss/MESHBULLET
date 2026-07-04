@@ -1,6 +1,6 @@
-# Raspberry Pi Pico 2 + W5500 + E22-900M30S — Meshtastic Variant
+# Raspberry Pi Pico 2 + W6100 + WS_LR2021 — Meshtastic Variant
 
-Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 4 MB flash) with an external **W5500** Ethernet module and an **EBYTE E22-900M30S** LoRa module.
+Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 2 MB flash) with an external **W61500** Ethernet module and an **WS_LR2021** LoRa module.
 
 ---
 
@@ -10,7 +10,7 @@ Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 4 MB flash) with an ex
 | --------- | ------------------- | ---------------------------------------- |
 | MCU       | Raspberry Pi Pico 2 | RP2350 @ 150 MHz, 512 KB RAM, 4 MB flash |
 | Ethernet  | W5500 module        | Any WIZnet W5500 breakout board          |
-| LoRa      | EBYTE E22-900M30S   | SX1262 + 30 dBm PA, 868/915 MHz          |
+| LoRa      | WAVESHARE LR2021    | LR2021 (XTAL) + 22 dBm, 868/915 MHz          |
 
 ---
 
@@ -57,28 +57,10 @@ Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 4 MB flash) with an ex
 
 > See `wiring.svg` in this directory for the full connection diagram.
 
----
-
-## Special wiring: DIO2 → TXEN bridge on the E22 module
-
-The E22-900M30S does **not** connect DIO2 to the TXEN pin of its PA internally. They must be bridged with a short wire or solder bridge **on the module itself**:
-
-```text
-E22 DIO2 pin  ──┐
-                ├── wire / solder bridge on the module
-E22 TXEN pin  ──┘
-```
-
-With this bridge in place, `SX126X_DIO2_AS_RF_SWITCH` causes the SX1262 to drive DIO2 HIGH automatically during TX, enabling the PA without needing an RP2350 GPIO for TXEN.
-
-**Without this bridge the module will not transmit.**
-
----
-
 ## Build
 
 ```bash
-pio run -e pico2_w5500_e22
+pio run -e pico2_w6100_lr2021
 ```
 
 ### Flash — BOOTSEL mode
@@ -88,13 +70,13 @@ pio run -e pico2_w5500_e22
 3. Copy the `.uf2` file:
 
 ```text
-.pio/build/pico2_w5500_e22/firmware-pico2_w5500_e22-*.uf2
+.pio/build/pico2_w6100_lr2021/firmware-pico2_w6100_lr2021-*.uf2
 ```
 
 Or directly with picotool:
 
 ```bash
-pio run -e pico2_w5500_e22 -t upload
+pio run -e pico2_w6100_lr2021 -t upload
 ```
 
 ---
@@ -119,20 +101,9 @@ Services available once connected:
 
 ## Technical notes
 
-### LoRa — RF control
-
-| Define                         | Effect                                                      |
-| ------------------------------ | ----------------------------------------------------------- |
-| `SX126X_ANT_SW 3`              | GP3 (RXEN) driven HIGH at init and never toggled again      |
-| `SX126X_DIO2_AS_RF_SWITCH`     | SX1262 drives DIO2 HIGH during TX → enables TXEN via bridge |
-| `SX126X_DIO3_TCXO_VOLTAGE 1.8` | E22 TCXO controlled by DIO3                                 |
-| `-D EBYTE_E22_900M30S`         | Sets `TX_GAIN_LORA=7`, max power 22 dBm                     |
-
-> RXEN and TXEN may both be HIGH simultaneously during TX — this is safe for the E22 RF switch.
-
 ### Ethernet
 
-- Library: `arduino-libraries/Ethernet@^2.0.2` (supports W5100/W5200/W5500 auto-detection).
+- Library: `arduino-libraries/Ethernet@^2.0.2` (supports W6100).
 - SPI0 is explicitly initialized with pins GP16/18/19 before `Ethernet.init()`.
 - DHCP timeout is set to 10 s (instead of the default 60 s) to avoid blocking LoRa startup.
 
