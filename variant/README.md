@@ -1,3 +1,13 @@
+# Arduino Ethernet Library Comparison: Standard vs. WIZnet W6100 Fork
+
+[![Arduino Core](https://shields.io)](https://github.com/arduino-libraries/ethernet)
+[![WIZnet Fork](https://shields.io)](https://github.com/Wiznet/Ethernet)
+[![Protocol](https://shields.io)](#)
+
+A comprehensive guide explaining the architectural, protocol, and hardware differences between the official **Standard Arduino Ethernet Library** and the specialized **WIZnet W6100 IPv6 Fork**.
+
+---
+
 ## 📌 Supported Hardware Variants
 
 This project supports specific hardware configurations optimized for either indoor or outdoor deployment.
@@ -14,22 +24,14 @@ This project supports specific hardware configurations optimized for either indo
 * **Connectivity:** W6100 Ethernet (IPv6 ready)
 * **Wireless:** LR2021 LoRa module
 
-# Arduino Ethernet Library Comparison: Standard vs. WIZnet W6100 Fork
-
-[![Arduino Core](https://shields.io)]([https://github.com](https://github.com/arduino-libraries/ethernet))
-[![WIZnet Fork](https://shields.io)]([https://github.com](https://github.com/Wiznet/Ethernet.git))
-[![Protocol](https://shields.io)](#)
-
-A comprehensive guide and reference poster blueprint explaining the architectural, protocol, and hardware differences between the official **Standard Arduino Ethernet Library** and the specialized **WIZnet W6100 IPv6 Fork**.
-
 ---
 
-## 📌 Architectural Overview
+## 🔍 Architectural Overview
 
 When scaling IoT hardware deployments, selecting the correct network stack library impacts memory usage, protocol compliance, and hardware compatibility.
 
-*   **`arduino-libraries/Ethernet`** is optimized for widespread, legacy stability across mainstream microcontrollers utilizing a strict IPv4 networking architecture.
-*   **`Wiznet/Ethernet (Branch: master / W6100)`** introduces a full IPv6 hardware implementation alongside IPv4 (Dual-Stack) explicitly built to talk to modern enterprise infrastructure.
+* **`arduino-libraries/Ethernet`**: Optimized for widespread, legacy stability across mainstream microcontrollers utilizing a strict IPv4 networking architecture.
+* **`Wiznet/Ethernet (Branch: master / W6100)`**: Introduces a full IPv6 hardware implementation alongside IPv4 (Dual-Stack) explicitly built to talk to modern enterprise infrastructure.
 
 ---
 
@@ -116,7 +118,7 @@ If you maintain both folders in your active Arduino directory, the compiler will
 2. Move the standard `Ethernet` library folder out to a backup directory.
 3. Download or clone the WIZnet branch:
    ```bash
-   git clone https://github.com.git
+   git clone https://github.com/Wiznet/Ethernet.git
    ```
 4. Place the newly cloned repository folder directly inside your active `libraries/` directory.
 5. Restart your Arduino IDE to flush the index caches.
@@ -125,7 +127,5 @@ If you maintain both folders in your active Arduino directory, the compiler will
 
 ## 🚀 Decision Flow: Which to Deploy?
 
-*   **Deploy the Standard Core Library if:** Your production hardware consists of older W5500 modules, you are resource-constrained on standard ATmega328P chips, or your project operates on traditional closed router systems.
-*   **Deploy the WIZnet Fork Library if:** Your architecture uses modern physical W6100 modules, or your deployment landscape mandates **IPv6 address compliance** across industrial enterprise networks.
-
-
+* **Deploy the Standard Core Library if:** Your production hardware consists of older W5500 modules, you are resource-constrained on standard ATmega328P chips, or your project operates on traditional closed router systems.
+* **Deploy the WIZnet Fork Library if:** Your architecture uses modern physical W6100 modules, or your deployment landscape mandates **IPv6 address compliance** across industrial enterprise networks.
