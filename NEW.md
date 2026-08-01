@@ -1,54 +1,61 @@
 # 🛰️ MESHBULLET
 
-PoE and non-PoE Meshtastic node supporting OTA over Ethernet, utilizing custom ABS parts sponsored by [Justway Manufacturing](https://justway.com).
+PoE and non-PoE Meshtastic node supporting OTA over Ethernet. 
+
+The mechanical reliability and structural assembly of this deployment are secured using engineering-grade, custom-fabricated **ABS parts** sponsored by [Justway Manufacturing](https://justway.com).
+
+---
 
 ## 📌 Features
 
-*   **Core:** Raspberry Pi Pico RP2350 (or similar PoE EVB).
-*   **Connectivity:** SPI Wiznet Ethernet.
-*   **RF:** SX1262 / LR1121 / LR2011 modules.
-*   **Enclosure:** Custom 3D-printed (FDM ABS).
+*   **Core Processor:** Powered by the high-performance **Raspberry Pi Pico RP2350** MCU.
+*   **Wired Connectivity:** High-speed SPI Wiznet Ethernet supporting Over-The-Air (OTA) flashing.
+*   **RF Engine:** Flexible SPI LoRa radio engine supporting SX1262, LR1121, or LR2011 modules.
+*   **Rugged Enclosure:** Modular, dual-cylinder protective tube case.
 
 ---
 
 ## 🚀 Project Sponsor: Justway 3D Printing
 
-Enclosures and structural parts are proudly printed by [Justway](https://justway.com), utilizing FDM with high-durability ABS for rugged deployment. Upload the project `.step`/`.stl` files directly for instant quoting and rapid prototyping.
+All custom plastic framework components are supplied by [Justway](https://justway.com), featuring high-durability **Green ABS** fabricated via FDM for robust, outdoor deployment.
+
+### Provided Kit Components:
+*   **2x Green ABS Structural Cylinders:** Main body housing.
+*   **2x Sets of Custom End Caps:** Designed for secure, sealed assembly.
 
 ---
 
-## 🛠️ General Instructions
+## 🛠️ Specialized Assembly Instructions
 
-1.  **PCB:** Fabricate boards using provided Gerbers.
-2.  **3D Print:** Print all enclosure components.
-3.  **Assembly:** Solder components, use B-7000 glue to secure the RJ45 port and antenna, and align the core into the ABS housing.
-4.  **Firmware:** Flash with supported Meshtastic firmware.
+Utilize the specific sponsored green ABS components with these assembly steps:
 
----
-
-## 🔌 Hardware Variants & BOM
-
-*   **Non-PoE:** Pico RP2350 + Wiz850io (W5500) + Seeed WIO-SX1262/LR1121.
-*   **PoE:** Wiznet W6100/W5100S-EVB-Pico2 + WIO/Waveshare LoRa modules.
-*   *See full repository for solder sequence instructions.*
+1.  **Preparation:** Clean the **2x Green ABS Cylinders** and insert threaded brass inserts using a soldering iron.
+2.  **Cap Integration:** Secure the **RJ45 Cap** using B-7000 adhesive (allow 2 days for curing) and lock the uFl-to-SMA pigtail in the **Antenna Cap**.
+3.  **Final Seal:** Slide the electronics core into the cylinders and fasten the caps, ensuring careful tightening of the ABS threads.
 
 ---
 
-## 📸 Media & Component Links
+## 🔌 Hardware Variants
 
-*   **Renderings:** See `[images/]` in repository for assembly views and PCB layouts.
-*   **Components:** Components such as Wiznet modules and Seeed/Waveshare LoRa modules are linked in the main [README.md](https://github.com).
+*   **Non-PoE:** RP2350 Pico + Wiz850io (W5500) + LoRa Module.
+*   **PoE:** W6100/W5100S-EVB-Pico2 + WizPoE-P1 Module + LoRa Module.
 
 ---
 
-## 🤝 Credits
+## 📸 Media Gallery
 
-*   **[MESHTASTIC Project](https://github.com)**
-*   **Carlos Valdes** (Ethernet stack/OTA contributions)
-*   **Justway** (3D printing support)
+Hardware images, including the sponsored green ABS housing, are provided in the documentation.
+
+---
+
+## 🤝 Credits & Acknowledgements
+
+*   **[The MESHTASTIC Project](https://github.com)** for open-source radio infrastructure.
+*   **Carlos Valdes** for foundational implementation regarding Meshtastic Wiznet Ethernet integration and OTA support.
+*   **Justway** for hardware component sourcing and rapid manufacturing support.
 
 ---
 
 ## ⚠ Disclaimer
 
-Use of PCB GERBER and 3D files is at your own risk.
+Use of the provided PCB Gerber schematics and 3D enclosure structures is completely at your own risk. The project maintainers hold no accountability for structural malfunctions, hardware frying, or damage resulting from deployment replication.
