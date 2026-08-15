@@ -55,8 +55,6 @@ Meshtastic support for a **Raspberry Pi Pico 2** (RP2350, 2 MB flash) with an ex
 | VCC        | 3.3V        | Add a 100 µF capacitor close to the module |
 | GND        | GND         | —                                          |
 
-> See `wiring.svg` in this directory for the full connection diagram.
-
 ## Build
 
 ```bash
