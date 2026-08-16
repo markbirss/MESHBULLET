@@ -18,10 +18,10 @@ This project supports specific hardware configurations optimized for either indo
 * **Wireless:** Wio / SX1262 LoRa module
 
 ### 🌳 Outdoor Variant
-* **Model:** `pico2_w6100_lr2021`
+* **Model:** `pico2_w6100_lr2021` and `pico2_w6100_lr1121`
 * **Core:** Raspberry Pi Pico 2
 * **Connectivity:** W6100 Ethernet (IPv6 ready)
-* **Wireless:** LR2021 LoRa module
+* **Wireless:** LR2021/LR1121 LoRa module
 
 ---
 
