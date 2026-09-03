@@ -12,7 +12,65 @@ PoE and non-PoE Meshtastic node supporting OTA over Ethernet including a 3D prin
 
 ---
 
-## 🛠️ General Instructions
+## 🚀 Project Sponsor: Justway 3D Printing
+
+Justway was kind enough to sponsor some ABS 3D printed parts and ship them to me
+
+Check out  [Justway](https://justway.com), an on-demand digital manufacturing platform that provides rapid prototyping and custom production parts.
+
+## 🚀 Core Capabilities
+
+* **CNC Machining**: High-precision milling (3, 4, & full 5-axis) and turning.
+* **3D Printing**: Industrial prototyping using SLA, SLS, MJF, FDM, and SLM.
+* **Sheet Metal Fabrication**: Laser cutting, CNC bending, welding, and punching.
+* **Injection Molding**: Fast production-grade steel tooling for up to 1 million parts.
+* **Vacuum Casting**: Low-volume elastomeric and rubber-like components.
+
+## 🛠️ Supported Materials
+
+* **Metals**: Aluminum, Stainless Steel, Titanium, Brass, Copper, Mild/Alloy Steel.
+* **Plastics**: ABS, Polycarbonate (PC), Nylon, Polypropylene (PP), POM (Delrin), PEEK, Resin, PLA.
+
+## 📦 Getting Started
+
+### Prerequisites & Installation
+
+Ensure you have Python 3.8+ installed, then install the necessary dependencies:
+
+%%MAGIT_PARSER_PROTECT%%```bash
+git clone https://github.com/your-username/digital-manufacturing-platform.git
+cd digital-manufacturing-platform
+pip install -r requirements.txt
+%%MAGIT_PARSER_PROTECT%%```
+
+### Usage Example
+
+Generate an instant manufacturing quote programmatically using a CAD file:
+
+%%MAGIT_PARSER_PROTECT%%```bash
+python quote_generator.py --file path/to/your/model.step --material Aluminum --process CNC
+%%MAGIT_PARSER_PROTECT%%```
+
+## ⚙️ Workflow Pipeline
+
+1. **Instant Quote**: Upload CAD file and select manufacturing parameters.
+2. **Order Review**: Technical audit for manufacturability (DFM checks).
+3. **Payment**: Secure transaction processing.
+4. **Real-time Fabrication Tracking**: Active status updates directly from the factory floor.
+5. **Delivery**: Global shipping with tracking.
+
+## 🤝 Contributing & License
+
+Contributions via Pull Requests are welcome. Please open an issue first to discuss your proposed changes.
+
+Distributed under the **MIT License**. See `LICENSE` for details.
+### Provided Kit Components:
+*   **2x Green ABS Structural Cylinders:** Main body housing.
+*   **2x Sets of Custom End Caps:** Designed for secure, sealed assembly.
+
+---
+
+## 🛠️ General DIY Instructions
 
 ### Prerequisites
 1. **PCB Fabrication:** Submit the provided PCB Gerber files to a manufacturer (e.g., [JLCPCB](https://jlcpcb.com/RGE) — 5 pieces minimum).
