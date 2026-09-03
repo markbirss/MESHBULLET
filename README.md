@@ -14,6 +14,8 @@ PoE and non-PoE Meshtastic node supporting OTA over Ethernet including a 3D prin
 
 ## 🚀 Project Sponsor: Justway 3D Printing
 
+<img width="1700" height="1291" alt="image" src="https://github.com/user-attachments/assets/fe69a59f-6a2c-4d15-add8-0d07d75ea47f" />
+
 Justway was kind enough to sponsor some ABS 3D printed parts and ship them to me
 
 Check out  [Justway](https://justway.com), an on-demand digital manufacturing platform that provides rapid prototyping and custom production parts.
