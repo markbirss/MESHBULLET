@@ -35,6 +35,8 @@ Check out  [Justway](https://justway.com), an on-demand digital manufacturing pl
 *   **2x Green ABS Structural Cylinders:** Main body housing.
 *   **2x Sets of Custom End Caps:** Designed for secure, sealed assembly.
 
+<img width="3740" height="1530" alt="image" src="https://github.com/user-attachments/assets/2fdde72e-bc19-40e1-8bb1-c2edcd966b24" />
+
 ---
 
 ## 🛠️ General DIY Instructions
