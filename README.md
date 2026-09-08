@@ -46,7 +46,7 @@ These are using WS_LR1121 LoRa Radio hense the short 2.4Ghz antenna together wit
 ## 🛠️ General DIY Instructions
 
 ### Prerequisites
-1. **PCB Fabrication:** Submit the provided PCB Gerber files to a manufacturer (e.g., [JLCPCB](https://jlcpcb.com/RGE) — 5 pieces minimum).
+1. **PCB Fabrication:** Submit the provided PCB Gerber files to a manufacturer.
 2. **3D Printing:** Print all required enclosure components.
 3. **Firmware:** Flash the board with the firmware (Note: This specific DIY variant firmware is pending release/merge).
 
